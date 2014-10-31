@@ -25,8 +25,6 @@ We have developed a wrapper script that uses twitter-log [3] to extract tweets f
 
 •	Account is connection to hashtags they mentioned.
 
-A sample graph using the aforementioned topology is shown in figure 1.
-
 Data Extraction:
 
 After the data was extracted using scrap\_twitter.py we used gt.py to extract, transform, and load the data into Tweet, Node, and Edge classes that we created to effectively manage data for further processing. The format of the data extracted by scrap\_twitter.py was as follows:
@@ -48,7 +46,7 @@ After the first round of extraction, we have everything in a list of tweets. We 
 
 Next we add the tweet’s data into the NetworkX [4] graph object as per the topology we described earlier. We used the Node and Edge class to store further complex relations, but commented them our after we adopted NetworkX [4]. They can still be of use when visualizing millions of tweets, because they enable extension for complex analysis, and serialization to disk. 
  
-The key challenge in this project was to plot such a massive graph. With over a hundred thousand nodes and edges. We first attempted to draw the graph using vis.js [6] (a popular javascript canvas based library), but failed because of its ability to draw large graphs. Vis.js takes over 5 minutes to draw even a simple graph with over 200 nodes. It is, however, good to visualize small networks and graphs. We present the graph of Fatima Bhutto’s network in figure 2 drawn using vis.js 
+The key challenge in this project was to plot such a massive graph. With over a hundred thousand nodes and edges. We first attempted to draw the graph using vis.js [6] (a popular javascript canvas based library), but failed because of its ability to draw large graphs. Vis.js takes over 5 minutes to draw even a simple graph with over 200 nodes. It is, however, good to visualize small networks and graphs.
 
 Analysis (of results):
 
